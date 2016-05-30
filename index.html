@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Zulrah Assistant</title>
+	<link href="css/base.css" rel="stylesheet" type="text/css" />
+	<link href="img/favicon.png" rel="shortcut icon" type="image/png">
+</head>
+<body>
+
+	<button class="restart">
+		Restart
+	</button>
+	
+	<button class="instructions">
+		Instructions
+	</button>
+
+	<table class="instructions hidden">
+		<tr>
+			<td colspan=2>
+				Resize this window to the size you want. The contents
+				will fit to your liking.<br/><br/>
+			</td>
+		</tr>
+		<tr>
+			<td><div class="zulrah melee"></td>
+			<td>Melee Form</td>
+		</tr>
+		<tr>
+			<td><div class="zulrah range"></td>
+			<td>Range Form</td>
+		</tr>
+		<tr>
+			<td><div class="zulrah magic"></td>
+			<td>Magic Form</td>
+		</tr>
+		<tr>
+			<td><div class="zulrah jad range"></td>
+			<td>Jad Form (Range First)</td>
+		</tr>
+		<tr>
+			<td><div class="zulrah jad magic"></td>
+			<td>Jad Form (Magic First)</td>
+		</tr>
+		<tr>
+			<td><div class="zulrah optional range"></td>
+			<td>Unpredictable Form (Hide behind pillar)</td>
+		</tr>
+	</table>
+
+	<div class="current">
+		<div class="pre-rotation">
+			<h2>Current Rotation</h2>
+			<div class="first phase">
+				<div class="stage" data-phase="range|1"></div>
+			</div>
+
+			<div class="second phase hidden">
+				<div class="faded stage" data-phase="range|1"></div>
+				<div class="faded stage" data-phase="melee|1"></div>
+				<div class="stage" data-phase="magic|1"></div>
+			</div>
+		</div>
+
+		<div class="rotation a hidden">
+			<h2>Rotation A</h2>
+			<div class="faded stage" data-phase="range|1"></div>
+			<div class="faded stage" data-phase="melee|1"></div>
+			<div class="faded stage" data-phase="magic|4"></div>
+			<div class="stage" data-phase="range top|4"></div>
+			<div class="stage" data-phase="melee|4"></div>
+			<div class="stage" data-phase="magic right|4"></div>
+			<div class="stage" data-phase="range top|2"></div>
+			<div class="stage" data-phase="magic top|4"></div>
+			<div class="stage" data-phase="jad range right|5"></div>
+			<div class="stage" data-phase="melee|5"></div>
+		</div>
+
+		<div class="rotation b hidden">
+			<h2>Rotation B</h2>
+			<div class="faded stage" data-phase="range|1"></div>
+			<div class="faded stage" data-phase="melee|1"></div>
+			<div class="faded stage" data-phase="magic|4"></div>
+			<div class="stage" data-phase="range right|4"></div>
+			<div class="stage" data-phase="range left optional|4"></div>
+			<div class="stage" data-phase="magic top|4"></div>
+			<div class="stage" data-phase="melee|4"></div>
+			<div class="stage" data-phase="range left|3"></div>
+			<div class="stage" data-phase="magic top|4"></div>
+			<div class="stage" data-phase="jad range right|5"></div>
+			<div class="stage" data-phase="melee|5"></div>
+		</div>
+
+		<div class="rotation c hidden">
+			<h2>Rotation C</h2>
+			<div class="faded stage" data-phase="range|1"></div>
+			<div class="faded stage" data-phase="range left|1"></div>
+			<div class="stage" data-phase="melee|2"></div>
+			<div class="stage" data-phase="magic right|3"></div>
+			<div class="stage" data-phase="range top|3"></div>
+			<div class="stage" data-phase="magic left|3"></div>
+			<div class="stage" data-phase="range|4"></div>
+			<div class="stage" data-phase="range right|4"></div>
+			<div class="stage" data-phase="magic|2"></div>
+			<div class="stage" data-phase="jad magic left|2"></div>
+			<div class="stage" data-phase="magic|1"></div>
+		</div>
+
+		<div class="rotation d hidden">
+			<h2>Rotation D</h2>
+			<div class="faded stage" data-phase="range|1"></div>
+			<div class="faded stage" data-phase="magic left|1"></div>
+			<div class="stage" data-phase="range top|4"></div>
+			<div class="stage" data-phase="magic right|4"></div>
+			<div class="stage" data-phase="melee|2"></div>
+			<div class="stage" data-phase="range left|2"></div>
+			<div class="stage" data-phase="range top|4"></div>
+			<div class="stage" data-phase="magic right|4"></div>
+			<div class="stage" data-phase="range|2"></div>
+			<div class="stage" data-phase="magic|2"></div>
+			<div class="stage" data-phase="jad magic left|2"></div>
+			<div class="stage" data-phase="magic|1"></div>
+		</div>
+	</div>
+
+	<div class="select">
+		<div class="first selection">
+			<h2>2nd Phase (Choose)</h2>
+			<div class="stage next" data-phase="melee|1"></div>
+			<div class="stage" data-rotation="c" data-phase="range left|1"></div>
+			<div class="stage" data-rotation="d" data-phase="magic left|1"></div>
+		</div>
+		<div class="second selection hidden">
+			<h2>3rd Phase (Choose again)</h2>
+			<div class="stage" data-rotation="a" data-phase="range top|4"></div>
+			<div class="stage" data-rotation="b" data-phase="range right|4"></div>
+		</div>
+	</div>
+
+	<script src="js/app.js"></script>
+</body>
+</html>

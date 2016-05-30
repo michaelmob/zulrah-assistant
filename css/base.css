@@ -1,0 +1,107 @@
+body {
+	font-family: Arial;
+}
+
+.hidden {
+	display: none !important;
+}
+
+.faded {
+	opacity: 0.25;
+}
+
+button {
+	cursor: pointer;
+	border: 0;
+	border-radius: 0.25rem;
+	padding: 0.5rem 1rem;
+	background: #fff !important;
+	color: rgba(0,0,0,.6) !important;
+	box-shadow: 0 0 0 1px rgba(34,36,38,.15) inset;
+}
+
+button:hover {
+	color: rgba(0,0,0,.8) !important;
+	box-shadow: 0 0 0 1px rgba(34, 36, 38, .35) inset,
+		0 0 0 0 rgba(34, 36,38, .15) inset;
+}
+
+button:active {
+	box-shadow: 0 0 0 1px rgba(34,36,38,.75) inset;
+}
+
+/**********/
+/* Stage */
+.stage {
+	display: inline-block;
+	position: relative;
+	transition: opacity 150ms, background 150ms;
+	background: #FFF no-repeat top center;
+	background-image: url("../img/stage.svg");
+	background-size: cover;
+	padding: 3.5rem;
+	margin: 0.5rem;
+}
+
+.select .stage:hover, .rotation .stage:hover {
+	cursor: pointer;
+	opacity: 0.55;
+}
+
+/**********/
+/* Player */
+.player {
+	position: absolute;
+	height: 5%;
+	width: 5%;
+	border: 1px solid black;
+	background: white;
+}
+
+/* -- Positions */
+.player.top { top: 27%; left: 48%; }
+.player.left { top: 40%; left: 22%; }
+.player.right { top: 40%; left: 72%; }
+.player.bottom { top: 70%; }
+
+/**********/
+/* Zulrah */
+.zulrah {
+	position: absolute;
+	top: 50%;
+	left: 45%; 
+	height: 10%;
+	width: 10%;
+	border-radius: 100%;
+}
+
+.instruction {
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+/* -- Forms */
+.magic { background: blue; }
+.range { background: lime; }
+.melee { background: red; }
+.jad.magic { background: linear-gradient(90deg, blue 50%, lime 50%); }
+.jad.range { background: linear-gradient(90deg, lime 50%, blue 50%); }
+.optional.range { background: radial-gradient(blue 35%, lime 35%); }
+
+/* -- Positions */
+.zulrah.top { top: 5%; left: 45%; }
+.zulrah.left { top: 45%; left: 0; }
+.zulrah.right { top: 45%; left: 90%; }
+
+/* Instructions Table */
+.instructions td:first-child {
+	width: 1rem;
+	position: relative;
+}
+
+.instructions td:first-child .zulrah {
+	top: 0;
+	left: 0;
+	padding: 0.5rem;
+}
