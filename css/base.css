@@ -1,3 +1,10 @@
+::selection { background:transparent; }
+
+html {
+	height: 100%;
+	width: 100%;
+}
+
 body {
 	font-family: Arial;
 }
@@ -43,7 +50,7 @@ button:active {
 	margin: 0.5rem;
 }
 
-.select .stage:hover, .rotation .stage:hover {
+.select .stage:hover {
 	cursor: pointer;
 	opacity: 0.55;
 }
